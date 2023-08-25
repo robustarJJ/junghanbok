@@ -1,0 +1,498 @@
+@import url(/css/mouse.css);
+/* 상단 로고 및 메뉴 */
+body{
+    margin: 0;
+    cursor: none;
+    background-color: white;
+}
+
+.backgroundcolor{
+    width: 100%;
+    height: 90px;
+    background-color: #3f332f;
+    background-image: url(../image/traditional-pattern-bg.png);
+    position: fixed;
+    z-index: 50;
+}
+#headMenu {
+    position: fixed;
+    z-index: 51;
+    top: 0px;
+    left: 0;
+    right: 0;
+    /* background-color: white; */
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* 내부 아이템 간의 공간을 균등하게 분배 */
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid black;  */
+}
+.aaa{
+    float: right;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    text-align: center;
+    flex: 1;
+}
+.logo>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo h1{
+    position: relative;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 110px;
+    position: fixed;
+    z-index: 52; 
+    font-size: 32px;
+    font-family: 'Diphylleia', serif;
+    font-weight: 500;
+}
+.logo>a>img{
+    position: relative;
+    align-items: center;
+    color: #a4a4a4;
+    margin-top: 90px;
+    position: fixed;
+    height: 40px;
+    z-index: 52; 
+}
+
+.btnArea {
+    display: flex;
+    align-items: center;
+    flex: 1; 
+    justify-content: flex-end; /* 내부 아이템을 오른쪽으로 정렬 */
+}
+
+.btnArea>div{
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.btnArea div a span{
+    color: rgb(255, 255, 255);
+    float: right;
+    text-decoration: none;
+    
+}
+.btnArea>div>a>span>ul>li{
+    font-size: 50px;
+}
+.btnArea div a img{
+    color: white;
+    margin-right: 10px;
+    float: left;
+    width: 30px;
+}
+
+
+/* menu 목록 만들기 */
+.mainNav{
+    color: #fff;
+    padding: 0;
+}
+
+.mainNav li{
+    display: inline-block;
+    position: relative;
+    margin: 0px 10px;
+}
+.mainNav li a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    
+}
+.mainNav li ul{
+    width: 200px;
+    line-height: 50px;
+    top: 50px;
+    position: absolute;
+    left: -50px;
+    display: none;
+    z-index: 1;
+}
+.mainNav li:hover>ul{
+    padding: 5px 20px;
+    margin: -20px;
+    display: block;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.mainNav li ul li{
+    display: inline-block;
+    height: 30px;
+}
+.mainNav li ul li a{
+    color: #afafaf;
+    font-weight: 300;
+}
+.mainNav li ul li a:hover, 
+.mainNav li ul li[class="on"]>a{
+    color: #ffe2d8;
+    font-weight: 700;
+}
+
+
+
+
+
+/* 좌우 페이지 박스 */
+.flex-container {
+    display: flex;
+}
+
+
+/* 왼쪽 고정 화면 */
+.title{
+    font-size: 10px;
+}
+.page_left_container{
+    width: 40%;
+    padding: 0px 60px;
+    /* border-bottom: 1px solid #828282; */
+}
+#page_left{
+    width: 670px;
+    padding: 20px 30px;
+    margin-right: 0px;
+    
+}
+.class_page_left {
+    position: sticky;
+    width: 50%;
+    padding: 0px 30px;
+    margin-right: 0px;
+    top: 130px;
+    margin-bottom: 100px;
+    flex: 1; 
+}
+.price{
+    padding: 0px 0px 10px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.image1 img{
+    width: 400px;
+    height: 400px;
+}
+.option{
+    width: 490px;
+    margin-top: 30px;
+    border-top: 0.1px solid #dddddd;
+    border-bottom: 0.1px solid #dddddd;
+    padding: 7px;
+}
+#size_option{
+    width: 100px;
+}
+*:focus{
+    outline: 0;
+}
+/* 이미지 썸네일 부분 */
+.image_thumbnail-1{
+    width: 95px;
+    height: 95px;
+    display: flex;
+    float: right;
+    margin: 0px 160px 0px 10px;
+    position: relative;
+}
+.image_thumbnail-1 img{
+    width: 95px;
+    height: 95px;
+}
+.jb-c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+.jb-a:hover .jb-c {
+    display: block;
+    opacity: 1;
+}
+.image1{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* 구매 박스 버튼들 */
+.buy_div{
+    margin-top: 30px;
+}
+.buy_btn{
+    font-size: 9pt;
+    color: #ffffff;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    width: 500px;
+    border: 2px solid #222222;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    letter-spacing: 5px;
+    font-family: 'Malgun Gothic';
+    transition: all .3s;
+}
+.basket_btn{
+    font-size: 9pt;
+    color: #000;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 0;
+    outline: none;
+    width: 245px;
+    border: 1px solid #dddddd;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    letter-spacing: 5px;
+    font-family: 'Malgun Gothic';
+    float: left;
+}
+.wish_btn{
+    font-size: 9pt;
+    color: #000;
+    margin-top: 10px;
+    padding: 0;
+    outline: none;
+    width: 245px;
+    border: 1px solid #dddddd;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    letter-spacing: 5px;
+    font-family: 'Malgun Gothic';
+    float: left;
+}
+.buy_btn:hover{
+    font-size: 9pt;
+    color: #ffffff7d;
+    cursor: pointer;
+}
+.basket_btn:hover{
+    font-size: 9pt;
+    color: #84000080;
+    cursor: pointer;
+}
+.wish_btn:hover{
+    font-size: 9pt;
+    color: #84000080;
+    cursor: pointer;
+}
+
+/* 확대경 기능 */
+.image1 {
+	position: relative;
+	width: 400px;
+	margin: 0;
+}
+.magnifier {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	border-radius: 100%;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85), 0 0 3px 3px rgba(0, 0, 0, 0.25);
+	display: none;
+}
+.glass_target {
+	display: block;
+	width: 100%;
+}
+
+
+
+/* 오른쪽 고정 화면 */
+.page_right{
+
+    /* border: 1px solid black;  */
+    margin-top: 70px;
+    width: 50%; 
+    height:50%; 
+    flex: 1;
+}
+.page_right>img{
+    width: 100%;
+}
+
+
+/* 관련 상품  */
+.with_item_border{
+    margin: 150px;
+    width: 85%;
+    height: 650px;
+    border: 1px solid #bdbdbd;
+}
+.with_item_title>h2{
+    text-align: center;
+    font-size: 15px;
+    color: #828282;
+    padding-top: 30px;
+}
+.with_item_title>p{
+    text-align: center;
+    font-size: 12px;
+    color: #828282;
+}
+.with_image{
+    text-align: center;
+}
+.with_image>div>img{
+    width: 300px;
+    padding: 50px 20px 30px 20px;
+}
+
+
+/* 슬라이드 배너 css부분 */
+.mySlides {
+    display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #170000;
+    font-size: 12px;
+    padding: 8px 12px;
+    top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    background-color: #717171;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.dot_btn{
+    text-align:center;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* 유의사항 */
+.Payment_Precautions{
+    margin: auto;
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    width: 85%;
+}
+.Payment_Precautions>h1{
+    margin-left: 30px;
+}
+.Payment_Precautions_text{
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 60px;
+    font-size: 12px;
+}
+.shipping_return{
+    margin: auto;
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    width: 85%;
+}
+.shipping_return>h1{
+    margin-left: 30px;
+}
+.shipping_return_text{
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 60px;
+    font-size: 12px;
+}
+
+
+/* footer start */
+footer{
+    width: 100%;
+    height: 90px;
+    color: #efefef;
+    padding: 0 40px;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    background-color: #3d3d3d;
+    display: flex;
+    font-family: 'Noto Serif KR', serif;
+
+}
+footer>ul{
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+    width: 80%;
+}
+footer>ul li:first-child{
+    width: 110px;
+}
+footer>ul li{
+    display: inline-block;
+    font-size: 12px;
+    padding-right: 40px;
+    word-break: keep-all;
+    line-height: 20px;
+}
+footer>ul li b{
+    display: block;
+}
+footer>p{
+    width: 20%;
+    font-size: 14px;
+    margin-top: 55px;
+    text-align: right;
+}
+footer::after{
+    content: "";
+    clear: both;
+    display: block;
+}

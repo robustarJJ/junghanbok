@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./css/brandintro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <script src="/js/global.js"></script>
+</head>
+<body>
+    <div id="opening"></div>
+    <header>
+        <h1><a href="index.html">정한복</a></h1>
+        <nav>
+            <!-- <ul id="subNav">
+                <li><a href="login.html">로그인</a></li><li><a href="join.html">회원가입</a></li>
+            </ul> -->
+            <ul class="mainNav">
+                <li><a href="brandintro.html">정한복</a>
+                    <ul class="innerNav">
+                        <li class="on"><a id="" href="brandintro.html">브랜드 소개</a></li>
+                        <li><a id="" href="brandway.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="rentalInfo.html">대여안내</a></li>
+                <li><a href="rental_w.html">한복대여</a>
+                    <ul>
+                        <li><a href="rental_w.html">여성한복</a></li>
+                        <li><a href="rental_m.html">남성한복</a></li>
+                        <li><a href="rental_b.html">아기한복</a></li>
+                        <li><a href="rental_a.html">악세사리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="review.html">이용후기</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="QnA.html">질의응답</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="mouseicon" class="mouseicon"></div>
+    <!-- <div class="bgImg"></div> -->
+    
+    <div class="mainImg">
+        <h3>브랜드 소개</h3>
+    </div>
+    <div class="gnbDiv">
+        <ul>
+            <li class="on"><a>브랜드 소개</a></li>
+            <li><a href="brandway.html">찾아오시는 길</a></li>
+        </ul>
+    </div>
+    <div class="introTitle">
+        <h3>정한복</h3>
+        <h4>junghanbok</h4>
+    </div>
+    <div class="introSec">
+        <div class="img"></div>
+        <div class="text">
+            <p>
+                한복은 우리의 문화와 정신입니다. <br> 정한복은 우리 문화와 정신의 아름다움을 세상에 알리고자 합니다.
+                정한복의 한복은 전통을 기리면서도 현대적 감각을 더하여 여러분의 특별한 순간을 빛내길 희망합니다. 정한복의 디자이너와 장인은 역사적인 자수와 원단의 조화로 새로운 작품을 만들어냅니다.
+                저희 제품은 단순한 의상을 넘어서 여러분의 아름다움과 이야기를 담아냅니다.
+                저희 한복은 여러분의 특별한 순간을 더욱 아름답게 만들 것입니다. <br> 한복을 입고 우리 문화를 함께 해보세요.
+            </p>
+        </div>
+    </div>
+        
+    <footer>
+        <ul>
+            <li>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</li>
+            <li><b>Tel.</b>032 719 4074</li>
+            <li><b>Mail.</b>junghanbok@gmail.com</li>
+        </ul>
+        <p>© 정한복. All rights reserved.</p>
+    </footer>
+    <script>
+         document.addEventListener('mousemove', (e)=>{
+            console.log(e)
+            let icon = document.querySelector('.mouseicon')
+            icon.style.left = e.pageX-12.5+'px'
+            icon.style.top = e.pageY-12.5+'px'       
+        })
+        document.addEventListener('mousedown',()=>{
+            document.getElementById('mouseicon').style.width="40px"
+            document.getElementById('mouseicon').style.height="40px"
+      
+        })
+        document.addEventListener('mouseup',()=>{
+            document.getElementById('mouseicon').style.width="25px"
+            document.getElementById('mouseicon').style.height="25px"
+      
+        })
+    </script>
+</body>
+</html>

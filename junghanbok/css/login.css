@@ -1,0 +1,122 @@
+@import "global.css";
+footer{
+    position: absolute;
+    bottom: 0;
+}
+.login-container {
+    text-align: center;
+    margin-top: 100px;
+}
+.login-title {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.login-ul {
+    font-size: 20px;
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.login-li{
+    display: inline;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+
+}
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.login-li.active {
+    background-color: rgb(90, 151, 187);
+    color: white;
+}
+.login-input{
+    width: 225px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(192, 192, 192);
+}
+.login-site-ul{
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.login-ul-li{
+    display: inline;
+    text-align: center;
+    margin: 5px;
+}
+.login-img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+.login-ul-div{
+    padding: 10px 20px;
+    margin: 5px 10px;
+    border-radius: 30px;
+    border: 0.1px solid rgb(206, 206, 206);
+    background-color: rgba(255,255,255,0.8);
+    color: #9b4949;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.login-a{
+    text-decoration: none;
+    vertical-align: middle;
+    color: #3f332f;
+}
+.login-ul-div:hover {
+    background-color: #3f332f;
+    color: #fff;
+}
+.login-btn{
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 50px;
+    background-color: rgba(255,255,255,0.8);
+    color: #3f332f;
+    border: 2px solid #3f332f;
+    margin: 40px 0;
+}
+.login-search-ul{
+    list-style-type: none;
+    list-style: none;
+    margin: 10px;
+}
+.login-search-li{
+    display: inline;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+.login-join-ul{
+    list-style-type: none;
+    list-style: none;
+}
+.login-join-li{
+    display: inline;
+}
+.login-search-li:nth-child(1){
+    border-right: 0.1px solid rgb(83, 83, 83);
+}
+.login-search-li:nth-child(2){
+    border-right: 0.1px solid rgb(83, 83, 83);
+}
+.login-search-a{
+    text-decoration: none;  
+    color: #dddddd;
+}
+.footer{
+    height: 150px;
+    background-color: beige;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

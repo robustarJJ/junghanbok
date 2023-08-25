@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/QnA.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <script src="/js/global.js"></script>
+</head>
+<header>
+    <h1><a href="index.html">정한복</a></h1>
+    <nav>
+        <!-- <ul id="subNav">
+            <li><a href="login.html">로그인</a></li><li><a href="join.html">회원가입</a></li>
+        </ul> -->
+        <ul class="mainNav">
+            <li><a href="brandintro.html">정한복</a>
+                <ul class="innerNav">
+                    <li><a id="" href="brandintro.html">브랜드 소개</a></li>
+                    <li><a id="" href="brandway.html">오시는 길</a></li>
+                </ul>
+            </li>
+            <li><a href="rentalInfo.html">대여안내</a></li>
+            <li><a href="rental_w.html">한복대여</a>
+                <ul>
+                    <li class="on"><a href="rental_w.html">여성한복</a></li>
+                    <li><a href="rental_m.html">남성한복</a></li>
+                    <li><a href="rental_b.html">아기한복</a></li>
+                    <li><a href="rental_a.html">악세사리</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul>
+                    <li><a href="review.html">이용후기</a></li>
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li class="on"><a href="QnA.html">질의응답</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div id="opening"></div>
+    <!-- 마우스 시작 -->
+    <div id="mouseicon" class="mouseicon"></div>
+    <!-- 마우스 끝 -->
+
+    <div class="mainImg">
+        <h3>커뮤니티</h3>
+    </div>
+    <div class="gnbDiv">
+        <ul>
+            <li><a href="review.html">이용후기</a></li>
+            <li><a href="notice.html">공지사항</a></li>
+            <li class="on"><a href="QnA.html">질의응답</a></li>
+        </ul>
+    </div>
+
+    <h2 class="qna-h2">고객센터</h2>
+    <div class="qna-faq-div">
+        <!-- <div class="qna-faq-input-div">
+            <div>
+                <span>FQA</span><input type="text" id="FAQInput"
+                class="qna-input faq-input"><button id="faqBtn" class="faq-btn"><i
+                    class="bi bi-search"></i></button><br>
+                    
+                </div>
+                <span class="faq-span">찾으시는 답변이 없으면 Q＆A 게시판을 이용해 주세요.[ Q＆A 게시판 ] </span>
+            </div> -->
+        <div class="qna-faq-title-div">
+            <div class="qna-h3-div">
+                <h3 class="qna-div-h3">FAQ</h3>
+            </div>
+            <ul id="faqList">
+                <li>
+                    <div class="faq-title" data-num="0">
+                        <i class="bi bi-question-diamond-fill"></i><span class="faq-title-span" data-num="0">고름은 어떻게
+                            매나요?</span><br>
+                        <iframe id="faq-div1" class="faq-hide" width="450" height="225" style="display: none;"
+                            src="https://www.youtube.com/embed/dMTLbkTeUGw" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-title" data-num="1">
+                        <i class="bi bi-question-diamond-fill"></i><span class="faq-title-span" data-num="1">여자한복
+                            착용방법</span><br>
+                        <iframe id="faq-div2" class="faq-hide" width="450" height="225" style="display: none;"
+                            src="https://www.youtube.com/embed/KL7-jQ4e4ig" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                <li>
+                    <div class="faq-title" data-num="2">
+                        <i class="bi bi-question-diamond-fill"></i><span class="faq-title-span" data-num="2">남자한복
+                            착용방법</span><br>
+                        <iframe id="faq-div3" class="faq-hide" width="450" height="225" style="display: none;"
+                            src="https://www.youtube.com/embed/ewmS6oOMDVg" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-title" data-num="3">
+                        <i class="bi bi-question-diamond-fill"></i><span class="faq-title-span" data-num="3">반납은 어떻게
+                            하나요?</span>
+                        <div id="faq-div5" class="faq-ans faq-hide" style="display: none;">
+                            A : [ 반납 포장방법 ]
+                            1. 한복 : 잘 접어서 넣어주세요<br>
+                            2. 속치마 : 접는 방법을 어려워 하셔서 영상으로 소개 드릴게요. 영상 참조해주세요 <br>
+                            3. 악세서리 : 배송 중 파손이 되면 위약금이 발생될 수 있으므로, 받으셨을 때처럼 별도 포장을 해주세요.
+                            특히, 갓, 어우동 전모를 신발 등과 섞어서 그냥 넣으실 경우 파손이 심하게 나서 위약금이 크게 발생하는 경우가 종종 있습니다. 꼭 주의해주세요.
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-title" data-num="4">
+                        <i class="bi bi-question-diamond-fill"></i><span class="faq-title-span" data-num="4">배송은 언제
+                            되나요?</span>
+                        <div id="faq-div5" class="faq-ans faq-hide" style="display: none;">
+                            A : 고객님께서 써주신 사용일 전날까지는 꼭 도착할 수 있도록 해드리고 있습니다.<br>
+                            다만, 지역에 따라서 혹은 택배기사님의 사정에 따라 택배 기간이 2~4일정도 더 늘어나는 경우도 있으니 안전하게 이용 날짜 전까지 받아보시고 싶으시다면<br>
+                            사용하시고 싶은 날을 기준으로 영업일기준(주말, 공휴일 제외) 최소 4일 전에는 주문을 해주시는 것이 안전합니다.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="qna-div">
+        <div class="qna-h3-div">
+            <h3 class="qna-div-h3">Q & A</h3>
+        </div>
+        <div class="qna-userdiv">
+            <ul id="qnaUllist">
+                <li class="qna-li">
+                    <div class="qna-text-title">
+                        <div class="qna-div-text-title" data-no="0">제목1</div>
+                        <div class="qna-div-text-user"data-no="0">김이박</div>
+                    </div>
+                    <div class="qna-qna" style="display: none;">
+                        <div class="qna-usercontent text">한복이 뭔가요?</div>
+                        <div class="qna-mncontent text">한복은 한국 전통 의상입니다.</div>
+                    </div>
+                </li>
+                <li class="qna-li">
+                    <div class="qna-text-title">
+                        <div class="qna-div-text-title" data-no="1">제목2</div>
+                        <div class="qna-div-text-user" data-no="1">이삼사</div>
+                    </div>
+                    <div class="qna-qna" style="display: none;">
+                        <div class="qna-usercontent text">회사는 뭔가요?</div>
+                        <div class="qna-mncontent text">돈 버는 곳입니다.</div>
+                    </div>
+                </li>
+                <li class="qna-li">
+                    <div class="qna-text-title">
+                        <div class="qna-div-text-title" data-no="2">제목3</div>
+                        <div class="qna-div-text-user" data-no="2">박식해</div>
+                    </div>
+                    <div class="qna-qna" style="display: none;">
+                        <div class="qna-usercontent text">대여비는 어찌 되나요?</div>
+                        <div class="qna-mncontent text">홈페이지에 대여요금 안내 페이지에 안내되어 있습니다.</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn-container" style="display: none;">
+                <div class="create-qna">
+                    <label for="qnaUsername">이름:</label>
+                    <input type="text" id="qnaUsername" name="qua-username" required><br>
+                    <label for="qnaUserEmail">이메일:</label>
+                    <input type="email" id="qnaUserEmail" name="qna-useremail" required><br>
+                    <label for="qnaTitle">문의 제목 : </label>
+                    <input type="text" id="qnaTitle" name="qna-cre-title" required><br>
+                    <label for="qnaMessage">문의 내용:</label><br>
+                    <textarea id="qnaMessage" name="qna-message" rows="4" required></textarea><br>
+                    <button type="submit" id="closeBtn" class="qna-create-btn">문의하기</button>
+                    <button type="button" id="cancelBtn" class="qna-create-btn">취소하기</button>
+                </div>
+            </div>
+            <div class="crebtn">
+                <button type="button" id="qnaBtn" class="qna-create-btn">질문하기</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('qnaBtn').addEventListener('click', function () {
+            var btnCon = document.querySelector('.btn-container');
+            btnCon.style.display = 'block';
+
+            // 입력 폼 초기화
+            document.getElementById('qnaUsername').value = '';
+            document.getElementById('qnaUserEmail').value = '';
+            document.getElementById('qnaTitle').value = '';
+            document.getElementById('qnaMessage').value = '';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var qnaUllist = document.getElementById('qnaUllist');
+            var num = 3;
+
+            // 문의하기 버튼 클릭 시 동작
+            document.getElementById('qnaBtn').addEventListener('click', function () {
+                var btnCon = document.querySelector('.btn-container');
+                btnCon.style.display = 'block';
+
+                // 입력 폼 초기화
+                document.getElementById('qnaUsername').value = '';
+                document.getElementById('qnaUserEmail').value = '';
+                document.getElementById('qnaTitle').value = '';
+                document.getElementById('qnaMessage').value = '';
+            });
+
+            // 새로운 질문 추가 함수
+            function addNewQna(qnaUsername, qnaTitle, qnaMessage) {
+                var qnaUserEmail = document.getElementById('qnaUserEmail').value;
+
+                // 이메일 형식 유효성 검사
+                if (!isValidEmail(qnaUserEmail)) {
+                    alert('이메일 형식이 올바르지 않습니다. 이메일을 확인해주세요.');
+                    return;
+                }
+
+                // 새로운 질문을 생성하고 추가
+                let str = '<li>'
+                str += `<div class="qna-text-title" data-no="${num}">
+                <div class="qna-div-text-title">${qnaTitle}</div>
+                <div class="qna-div-text-user">${qnaUsername}</div>
+                </div>
+                <div class="qna-qna" style="display: none;">
+                <div class="qna-usercontent text">${qnaMessage}</div>
+                <div class="qna-mncontent text">미답변</div>
+                </div>
+                </li>`;
+                qnaUllist.innerHTML += str;
+                num++;
+
+                // 새로운 질문에 대한 클릭 이벤트 추가
+                var newQna = qnaUllist.lastElementChild;
+                var newViewqna = newQna.querySelector('.qna-text-title');
+                var newQnaContent = newQna.querySelector('.qna-qna');
+
+                // 글 추가하고 난 후에 질문 열고 닫기
+                newViewqna.addEventListener('click', function (e) {
+                    var i = e.target.dataset.no;
+                    if (newQnaContent.style.display === 'none') {
+                        newQnaContent.style.display = 'block';
+                    } else {
+                        newQnaContent.style.display = 'none';
+                    }
+                });
+
+                var btnCon = document.querySelector('.btn-container');
+                btnCon.style.display = 'none';
+            }
+
+            // 문의하기 버튼 클릭 시 새로운 질문 추가
+            document.getElementById('closeBtn').addEventListener('click', function () {
+                var qnaUsername = document.getElementById('qnaUsername').value;
+                var qnaTitle = document.getElementById('qnaTitle').value;
+                var qnaMessage = document.getElementById('qnaMessage').value;
+
+                // 값을 하나라도 안줬을 경우 경고문
+                if (!qnaUsername || !qnaTitle || !qnaMessage) {
+                    alert('모든 필드를 채워주세요.');
+                    return;
+                }
+                // 게시글 달기
+                addNewQna(qnaUsername, qnaTitle, qnaMessage);
+
+                // 기존의 질문 클릭 이벤트 설정
+                var viewqna = document.querySelectorAll('.qna-text-title');
+                var qna = document.querySelectorAll('.qna-qna');
+
+                viewqna.forEach(function (viewqna) {
+                    viewqna.addEventListener('click', function (e) {
+                        var i = e.target.dataset.no;
+                        if (qna[i].style.display === "none") {
+                            qna[i].style.display = "block";
+                        } else {
+                            qna[i].style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+
+        // 취소하기 버튼 클릭 시 동작
+        document.getElementById('cancelBtn').addEventListener('click', function () {
+            var btnCon = document.querySelector('.btn-container');
+            btnCon.style.display = 'none';
+
+            // 입력 폼 초기화
+            document.getElementById('qnaUsername').value = '';
+            document.getElementById('qnaTitle').value = '';
+            document.getElementById('qnaMessage').value = '';
+            document.getElementById('qnaUserEmail').value = '';
+        });
+
+        // 이메일 형식 유효성 검사 함수
+        function isValidEmail(email) {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+        }
+
+        var user = document.querySelectorAll('.qna-usercontent');
+        user.forEach(function (e) {
+            e.textContent = "Q : " + e.textContent;
+        });
+        var manager = document.querySelectorAll('.qna-mncontent');
+        manager.forEach(function (e) {
+            e.textContent = "A : " + e.textContent;
+        });
+
+        let qnaUl = document.getElementById('qnaUllist');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var viewqna = document.querySelectorAll('.qna-text-title');
+            var qna = document.querySelectorAll('.qna-qna');
+
+            viewqna.forEach(function (viewqna) {
+                viewqna.addEventListener('click', function (e) {
+                    var i = e.target.dataset.no;
+                    if (qna[i].style.display === "none") {
+                        qna[i].style.display = "block";
+                    } else {
+                        qna[i].style.display = "none";
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqTitle = document.querySelectorAll('.faq-title');
+            const faqHide = document.querySelectorAll('.faq-hide');
+            faqTitle.forEach(function (faqTitle) {
+                faqTitle.addEventListener('click', function (e) {
+                    var j = e.target.dataset.num;
+
+                    if (faqHide[j].style.display === 'none') {
+                        faqHide[j].style.display = 'block';
+                    } else {
+                        faqHide[j].style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+<footer>
+    <ul>
+        <li>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</li>
+        <li><b>Tel.</b>032 719 4074</li>
+        <li><b>Mail.</b>junghanbok@gmail.com</li>
+    </ul>
+    <p>© 정한복. All rights reserved.</p>
+</footer>
+
+</html>

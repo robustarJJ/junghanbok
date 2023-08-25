@@ -1,0 +1,12 @@
+#mouseicon{
+   
+    position: absolute; 
+    z-index: 20000;
+    pointer-events: none;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 100%;
+    mix-blend-mode: difference;
+    transition: width 0.2s, height 0.2s, color 0.2s;
+}

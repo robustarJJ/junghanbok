@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/global.css ">
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <script src="js/global.js"></script>
+    <!-- <script src="/js/global.js"></script> -->
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="index.html">정한복</a></h1>
+        <nav>
+            <!-- <ul id="subNav">
+                <li><a href="login.html">로그인</a></li><li><a href="join.html">회원가입</a></li>
+            </ul> -->
+            <ul class="mainNav">
+                <li><a href="brandintro.html">정한복</a>
+                    <ul class="innerNav">
+                        <li><a id="" href="brandintro.html">브랜드 소개</a></li>
+                        <li><a id="" href="brandway.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="rentalInfo.html">대여안내</a></li>
+                <li><a href="rental_w.html">한복대여</a>
+                    <ul>
+                        <li><a href="rental_w.html">여성한복</a></li>
+                        <li><a href="rental_m.html">남성한복</a></li>
+                        <li><a href="rental_b.html">아기한복</a></li>
+                        <li><a href="rental_a.html">악세사리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li class="on"><a href="review.html">이용후기</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="QnA.html">질의응답</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="mainImg">
+        <h3>커뮤니티</h3>
+    </div>
+    <div class="gnbDiv">
+        <ul>
+            <li class="on"><a href="rental_w.html">이용후기</a></li>
+            <li><a href="notice.html">공지사항</a></li>
+            <li><a href="QnA.html">질의응답</a></li>
+        </ul>
+    </div>
+    <div class="review-div">
+        <div class="review-h2-div">
+            <h2 class="review-div-h3">이용후기</h2>
+        </div>
+        <div class="review-userdiv">
+            <ul id="reviewUllist">
+                <li class="review-li-Sorting">
+                    <div class="review-text-title review-text-title-Sorting">
+                        <div class="title-num-Sorting">글번호</div>
+                        <div class="reivew-div-text-title-Sorting">제목</div>
+                        <div class="review-div-text-user-Sorting">작성자</div>
+                    </div>
+                </li>
+                <li class="review-li review-li-Sorting">
+                    <div class="review-text-title review-text-title-Sorting">
+                        <div class="title-num title-num-Sorting" data-no="0">1</div>
+                        <div class="reivew-div-text-title reivew-div-text-title-Sorting" data-no="0">css해줘요 한결님</div>
+                        <div class="review-div-text-user review-div-text-user-Sorting" data-no="0">김이박</div>
+                    </div>
+                    <div class="review-review" style="display: none;">
+                        <div class="review-usercontent review-usercontent-Soting">한복이 너무 이뻐요!!</div>
+                    </div>
+                </li>
+                <li class="review-li review-li-Sorting">
+                    <div class="review-text-title review-text-title-Sorting">
+                        <div class="title-num title-num-Sorting" data-no="1">2</div>
+                        <div class="review-div-text-title reivew-div-text-title-Sorting" data-no="1">나 이거 css 못하겠어</div>
+                        <div class="review-div-text-user review-div-text-user-Sorting" data-no="1">이삼사</div>
+                    </div>
+                    <div class="review-review" style="display: none;">
+                        <div class="review-usercontent text">비싼 한복을 대여해야 이쁜 것 같아요.. 너무 금액이 비싸요...</div>
+                    </div>
+                </li>
+                <li class="review-li review-li-Sorting">
+                    <div class="review-text-title review-text-title-Sorting">
+                        <div class="title-num title-num-Sorting" data-no="2">3</div>
+                        <div class="review-div-text-title reivew-div-text-title-Sorting" data-no="2">맷돌로 한결님 갈아넣기</div>
+                        <div class="review-div-text-user review-div-text-user-Sorting" data-no="2">박식해</div>
+                    </div>
+                    <div class="review-review" style="display: none;">
+                        <div class="review-usercontent text">한결님 여성한복 입은 모습 보고싶어요!</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn-container" style="display: none;">
+                <div class="create-review">
+                    <label for="reviewUsername">이름:</label>
+                    <input type="text" id="reviewUsername" name="review-username" required><br>
+                    <label for="reviewTitle">글 제목 : </label>
+                    <input type="text" id="reviewTitle" name="review-cre-title" required><br>
+                    <label for="reviewMessage">글 내용:</label><br>
+                    <textarea id="reviewMessage" name="review-message" rows="4" required></textarea><br>
+                    <button type="submit" id="createBtn" class="review-create-btn review-movebtn">글올리기</button>
+                    <button type="button" id="cancelBtn" class="review-create-btn review-movebtn">취소하기</button>
+                </div>
+            </div>
+            <div class="crebtn">
+                <button type="button" id="reviewBtn" class="review-create-btn">글쓰기</button>
+            </div>
+        </div>
+    </div>
+    <!-- 메뉴 끝 -->
+    <!-- 마우스 시작 -->
+    <div id="mouseicon" class="mouseicon"></div>
+    <!-- 마우스 끝 -->
+    <footer>
+        <ul>
+            <li>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</li>
+            <li><b>Tel.</b>032 719 4074</li>
+            <li><b>Mail.</b>junghanbok@gmail.com</li>
+        </ul>
+        <p>© 정한복. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+            var viewreviews = document.querySelectorAll('.review-text-title');
+                var reviews = document.querySelectorAll('.review-review');
+
+                viewreviews.forEach(function (viewreview) {
+                    viewreview.addEventListener('click', function (e) {
+                        var target = e.target;
+                        var targetNum = target.dataset.no;
+                        // console.log(target);
+                        // console.log(targetNum);
+
+                        if (reviews[targetNum].style.display === "none") {
+                            reviews[targetNum].style.display = "block";
+                        } else {
+                            console.log("넌")
+                            reviews[targetNum].style.display = "none";
+                        }
+                    });
+                });
+        // document.getElementById('reviewUllist').addEventListener('click',function(e){
+        //     var viewreviews = document.querySelectorAll('.review-text-title');
+        //     var reviews = document.querySelectorAll('.review-review');
+            
+            
+        // });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var reviewList = document.getElementById("reviewUllist");
+            var reviewBtn = document.getElementById("reviewBtn");
+            var createBtn = document.getElementById("createBtn");
+            var cancelBtn = document.getElementById("cancelBtn");
+            var reviewUllist = document.getElementById("reviewUllist");
+            var num = 3;
+            var titleNum = 4;
+
+            
+
+            // 새 이용후기 작성 폼 토글 기능
+            reviewBtn.addEventListener("click", function () {
+                var btnContainer = document.querySelector(".btn-container");
+                btnContainer.style.display = btnContainer.style.display === "none" ? "block" : "none";
+            });
+
+            // 새 이용후기 작성 기능
+            createBtn.addEventListener("click", function () {
+                var username = document.getElementById("reviewUsername").value;
+                var title = document.getElementById("reviewTitle").value;
+
+
+                var message = document.getElementById("reviewMessage").value;
+
+                if (username != '' && title != '' && message != '') {
+                    let str = '<li class="review-li-Sorting">'
+                    str += `<div class="review-text-title review-text-title-Sorting">
+                        <div class="title-num title-num-Sorting"  data-no=${num}>${titleNum}</div>
+            <div class="reivew-div-text-title reivew-div-text-title-Sorting" data-no=${num}>${title}</div>
+            <div class="review-div-text-user review-div-text-user-Sorting"  data-no=${num}>${username}</div>
+            </div>
+            <div class="review-review" style="display: none;">
+            <div class="review-usercontent text">${message}</div>
+            </div>`;
+                    str += '</li>';
+                    reviewUllist.insertAdjacentHTML('beforeend', str);
+                    num++;
+                    titleNum++;
+                    document.getElementById("reviewUsername").value = "";
+                    document.getElementById("reviewTitle").value = "";
+                    document.getElementById("reviewMessage").value = "";
+                    document.querySelector(".btn-container").style.display = "none";
+                }
+                // 이용후기 리스트 토글 기능
+                var viewreviews = document.querySelectorAll('.review-text-title');
+                var reviews = document.querySelectorAll('.review-review');
+
+                viewreviews.forEach(function (viewreview) {
+                    viewreview.addEventListener('click', function (e) {
+                        var target = e.target;
+                        var targetNum = target.dataset.no;
+                        // console.log(target);
+                        // console.log(targetNum);
+                        if (reviews[targetNum].style.display === "none") {
+                            reviews[targetNum].style.display = "block";
+                        } else {
+                            reviews[targetNum].style.display = "none";
+                        }
+                    });
+                });
+                viewreviews.forEach(function (viewreview) {
+                    viewreview.addEventListener('click', function (e) {
+                        var target = e.target;
+                        var targetNum = target.dataset.no;
+                        if(targetNum<3){
+                            // console.log(target);
+                            // console.log(targetNum);
+                            if (reviews[targetNum].style.display === "none") {
+                                reviews[targetNum].style.display = "block";
+                            } else {
+                                reviews[targetNum].style.display = "none";
+                            }
+                        }
+                    });
+                });
+            });
+
+            // 작성 취소 기능
+            cancelBtn.addEventListener("click", function () {
+                document.querySelector(".btn-container").style.display = "none";
+                document.getElementById("reviewUsername").value = "";
+                document.getElementById("reviewTitle").value = "";
+                document.getElementById("reviewMessage").value = "";
+            });
+        
+        });
+
+    </script>
+</body>
+
+</html>

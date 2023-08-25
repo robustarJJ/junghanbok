@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="css/searchPW.css">
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+
+    <script src="/js/global.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">정한복</a></h1>
+        <nav>
+            <!-- <ul id="subNav">
+                <li><a href="login.html">로그인</a></li><li><a href="join.html">회원가입</a></li>
+            </ul> -->
+            <ul class="mainNav">
+                <li><a href="brandintro.html">정한복</a>
+                    <ul class="innerNav">
+                        <li><a id="" href="brandintro.html">브랜드 소개</a></li>
+                        <li><a id="" href="brandway.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="rentalInfo.html">대여안내</a></li>
+                <li><a href="rental_w.html">한복대여</a>
+                    <ul>
+                        <li class="on"><a href="rental_w.html">여성한복</a></li>
+                        <li><a href="rental_m.html">남성한복</a></li>
+                        <li><a href="rental_b.html">아기한복</a></li>
+                        <li><a href="rental_a.html">악세사리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="review.html">이용후기</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="QnA.html">질의응답</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="mouseicon" class="mouseicon"></div>
+    <div class="searchID-container">
+        <h2 class="s-id-h2">비밀번호 찾기</h2>
+        <span class="s-id-span">가입하신 방법에 따라 비밀번호 찾기가 가능합니다.<br>외국인 회원의 경우 여권번호를 입력하세요.</span>
+        <div class="maindiv">
+            <fieldset id="fieldjoinPw" class="join-view">
+                <p class="s-id-md-p"><span class="s-id-md-span">회원 유형</span><select name="searchType" id="searchTypePw">
+                        <option value="default">회원유형</option>
+                        <option value="joinKr">개인회원</option>
+                        <option value="joinFg">외국인회원</option>
+                    </select></p>
+                <p class="s-id-md-p" id="korfil1">
+                    <input type="radio" id="RadioPhonePw" class="s-id-md-radio" name="s-id-radio" required checked>핸드폰
+                    번호
+                    <input type="radio" id="RadioEmailPw" class="s-id-md-radio" name="s-id-radio" required>이메일
+                </p>
+                <p class="s-id-md-p" id="korfil2">
+                    <span class="s-id-md-span">이름</span>
+                    <input type="text" id="inputName" class="s-id-md-input" required>
+                </p>
+                <p class="s-id-md-p" id="korfil3">
+                    <span class="s-id-md-span" id="SPhonePw">번호로 찾기</span>
+                    <span class="s-id-md-span" id="SEmailPw" style="display: none;">이메일로 찾기</span>
+                    <input type="text" id="inputPhone" class="s-id-md-input" required>
+                    <input type="text" id="inputEmail" class="s-id-md-input" style="display: none;" required>
+                </p>
+                <p class="s-id-md-p" id="korfil4">
+                    <span class="s-id-md-span">아이디</span>
+                    <input type="text" id="inputid" class="s-id-md-input" required>
+                </p>
+                <p class="s-id-md-p" id="fgfil1" style="display: none;">
+                    <span class="s-id-md-span">이름</span>
+                    <input type="text" id="fginputName" class="s-id-md-input" required>
+                </p>
+                <p class="s-id-md-p" id="fgfil2" style="display: none;">
+                    <span class="s-id-md-span">여권번호</span>
+                    <input type="text" id="fginputpassfort" class="s-id-md-input" required>
+                </p>
+                <p class="s-id-md-p" id="fgfil3" style="display: none;">
+                    <span class="s-id-md-span">아이디</span>
+                    <input type="text" id="fginputId" class="s-id-md-input" required>
+                </p>
+                <button type="submit" id="submitBtn" class="s-id-md-btn">확인</button>
+            </fieldset>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</li>
+            <li><b>Tel.</b>032 719 4074</li>
+            <li><b>Mail.</b>junghanbok@gmail.com</li>
+        </ul>
+        <p>© 정한복. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const searchTypePw = document.getElementById('searchTypePw');
+        const fieldjoinPw = document.getElementById('fieldjoinPw');
+        const radioPhonePw = document.getElementById("RadioPhonePw");
+        const radioEmailPw = document.getElementById("RadioEmailPw");
+        const spanEmailPw = document.getElementById("SEmailPw");
+        const spanPhonePw = document.getElementById("SPhonePw");
+        const korfil1 = document.getElementById('korfil1');
+        const korfil2 = document.getElementById('korfil2');
+        const korfil3 = document.getElementById('korfil3');
+        const korfil4 = document.getElementById('korfil4');
+        const fgfil1 = document.getElementById('fgfil1');
+        const fgfil2 = document.getElementById('fgfil2');
+        const fgfil3 = document.getElementById('fgfil3');
+        let inputPhone = document.getElementById('inputPhone');
+        let inputEmail = document.getElementById('inputEmail');
+        const submitBtn = document.getElementById('submitBtn');
+
+        let id=['user1','user2','user3'];
+        let pw=['A123','B123','C123'];
+        let phone=['01011111111','01022222222','01033333333'];
+        let email=['tmdqh@naver.com','tmdqh@google.com','tmdqh@daum.net'];
+        let passfort=['111111111','222222222','333333333'];
+        let fgid=['외국인1','외국인2','외국인3'];
+        let fgpw=['Dhlrnrdls1','Dhlrnrdls2','Dhlrnrdls3'];
+
+        searchTypePw.addEventListener("change", function () {
+            if (this.value === "joinKr") {
+                korfil1.style.display='block';
+                korfil2.style.display='block';
+                korfil3.style.display='block';
+                korfil4.style.display='block';
+                fgfil1.style.display='none';
+                fgfil2.style.display='none';
+                fgfil3.style.display='none';
+            } else if (this.value === "joinFg") {
+                korfil1.style.display='none';
+                korfil2.style.display='none';
+                korfil3.style.display='none';
+                korfil4.style.display='none';
+                fgfil1.style.display='block';
+                fgfil2.style.display='block';
+                fgfil3.style.display='block';
+            }
+        });
+
+        radioPhonePw.addEventListener("change", function () {
+            spanEmailPw.style.display = "none";
+            spanPhonePw.style.display = "block";
+            inputPhone.style.display = "block";
+            inputEmail.style.display = "none";
+        });
+
+        radioEmailPw.addEventListener("change", function () {
+            spanPhonePw.style.display = "none";
+            spanEmailPw.style.display = "block";
+            inputPhone.style.display = "none";
+            inputEmail.style.display = "block";
+        }); 
+
+        submitBtn.addEventListener('click',function(){
+            let inputName = document.getElementById('inputName').value;
+            let inputPhone = document.getElementById('inputPhone').value;
+            let inputEmail = document.getElementById('inputEmail').value;
+            let inputid = document.getElementById('inputid').value;
+            let fginputName = document.getElementById('fginputName').value;
+            let fginputpassfort = document.getElementById('fginputpassfort').value;
+            let fginputId = document.getElementById('fginputId').value;
+            let value1 = inputPhone;
+            let value2 = inputEmail;
+            let value3 = inputid;
+            let value4 = fginputpassfort;
+            let value5 = fginputId;
+            let number = 0;
+            if((value1!=''&&value3!='')||(value2!=''&&value3!='')){
+                for(let i=0;i<id.length;i++){
+                    if((value1==phone[i]&&value3==id[i])||(value2==email[i]&&value3==id[i])){
+                        alert('정보가 일치합니다. 비밀번호를 변경해주세요');
+                        let newpw = prompt('새 비밀번호 입력 : ');
+                        pw[i] = newpw;
+                        console.log(pw);
+                        number=1;
+                        document.getElementById('inputName').value = '';
+                        document.getElementById('inputPhone').value = '';
+                        document.getElementById('inputEmail').value = '';
+                        document.getElementById('inputid').value='';
+                        break;
+                    }
+                }
+            }else if(value4!=''&&value5!=''){
+                for(let i=0;i<id.length;i++){
+                    if(value4==passfort[i] && value5==fgid[i]){
+                        alert('정보가 일치합니다. 비밀번호를 변경해주세요');
+                        let newfgpw = prompt('새 비밀번호 입력 : ');
+                        fgpw[i]=newfgpw;
+                        console.log(fgpw);
+                        number=1;
+                        document.getElementById('fginputName').value='';
+                        document.getElementById('fginputpassfort').value='';
+                        document.getElementById('fginputId').value='';
+                        break;
+                    }
+                }
+            }
+            if(number==0){
+                alert('입력하신 정보가 없습니다. 다시 입력해주세요.');
+                document.getElementById('inputName').value = '';
+            }
+            document.getElementById('inputPhone').value = '';
+            document.getElementById('inputEmail').value = '';
+            document.getElementById('inputid').value='';
+            document.getElementById('fginputName').value='';
+            document.getElementById('fginputpassfort').value='';
+            document.getElementById('fginputId').value='';
+        });
+    </script>
+</body>
+
+</html>

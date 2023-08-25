@@ -1,0 +1,564 @@
+/* @import "reset.css"; */
+/* @import url(reset.css); */
+h1{
+    font-size: 100%;
+    margin: 0;
+    font-weight: 100;
+
+}
+
+body{
+    cursor: none;
+    background-color: #3f332f;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+::selection{
+    background: #fff;
+    color: #3f332f;
+}
+/* 화면이동 */
+#pagemove{
+    position: absolute;
+    background-color:  rgb(255, 255, 255);
+    z-index: 100;
+    pointer-events: none;
+    top: 0%;
+    width: 100%;
+    height: 0%;
+    transition: height 0.5s;
+    
+}
+#pagemove>div{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    background-image: url(../image/정.png);
+    background-size: cover;
+    transform: translate(-50%,-50%);
+    
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/* 로딩화면 */
+#opening{
+
+
+    animation-name: fadeOut1;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:url(/image/001.png);
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    z-index: 100;
+}
+#opening>h1{
+    font-family: 'Diphylleia', serif;
+    position: absolute;
+    font-size: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+@keyframes openDoorLeft {
+    0%{
+        left: 0;
+    }
+    5%{
+        left: -1%;
+        /* animation-delay: 2s; */
+    }
+    100%{
+        left: -100%;
+    }
+}
+@keyframes openDoorRight {
+    0%{
+        right: 0;
+    }
+    5%{
+        right: -1%;
+        /* animation-delay: 2s; */
+    }
+    100%{
+        right: -100%;
+    }
+}
+.opening{
+    background: url(../image/changho.png);
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+}
+.left{
+    animation-name: openDoorLeft;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    background-position: right;
+}
+.right{
+    right: 0;
+    animation-name: openDoorRight;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    background-position: left;
+}
+/* 로딩화면 끝 */
+
+/* fadeinOut */
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fadeOut1 {
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+#octagon1:hover{
+    animation-name: fadeOut;
+    animation-duration: 0.3s;
+    
+}
+#octagon2:hover{
+    animation-name: fadeOut;
+    animation-duration: 0.3s;
+    
+}
+#octagon3:hover{
+    animation-name: fadeOut;
+    animation-duration: 0.3s;
+    
+}
+/* fadeOut 끝 */
+/* Header */
+
+/* Header End */
+
+/* 배경, 구름 문양 */
+.bgImg{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(../image/traditional-pattern-bg.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  
+}
+
+.cloud1{
+    top: 30%;
+    right: 25%;
+    width: 200px;
+    height: 80px;
+    background: url(../image/cloud1.png);
+}
+.cloud2{
+    bottom: 30%;
+    right: 10%;
+    width: 200px;
+    height: 80px;
+    background: url(../image/cloud2.png);
+}
+.cloud3{
+    top: 40%;
+    left: 15%;
+    width: 200px;
+    height: 80px;
+    background: url(../image/cloud3.png);
+}
+.cloudBg{
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+/* 배경, 구름 문양 End */
+
+
+#bg{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+#logo{
+    font-size: 30px;
+    color: white;
+    font-family: 'Diphylleia', serif;
+    position: absolute;
+    font-weight: 500;
+    top: 2%;
+    left: 3%;
+}
+#octagon{
+   
+  
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    z-index: 12;
+   
+    
+}
+#octamenu{
+   
+    color: white;
+    font-size: 30px;
+    font-family: 'Diphylleia', serif;
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-8%);
+}
+#text1{
+    opacity: 0;
+    width: 200px;
+    height: 200px;
+   
+    background-size: cover;
+    text-align: center;
+  
+}
+
+#text2{
+    opacity: 0;
+    margin-left: 70px;
+ 
+    width: 200px;
+    height: 200px;
+   
+
+    background-size: cover;
+}
+#text3{
+    opacity: 0;
+    margin-left: 70px;
+  
+  
+    width: 200px;
+    height: 200px;
+   
+    background-size: cover;
+
+}   
+
+
+@media screen  and (min-width :300px) {
+    .cloudBg{
+        width: 75px;
+        height: 75px;
+    }
+    #octagon1{
+    
+        width: 75px;
+        height: 75px;
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+        text-align: center;
+       
+        border-radius: 100%;
+    }
+    
+    #octagon2{
+        margin-left: 60px;
+       
+        width: 75px;
+        height: 75px;
+      
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+        border-radius: 100%;
+    }
+    #octagon3{
+        margin-left: 60px;
+     
+      
+        width: 75px;
+        height: 75px;
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+        border-radius: 100%;
+    }
+    #text1{width: 75px;height: 75px;font-size: 15px;}
+    #text2{width: 75px;height: 75px;font-size: 15px;}
+    #text3{width: 75px;height: 75px;font-size: 15px;}
+   
+}
+@media screen  and (min-width :600px) {
+    .cloudBg{
+        width: 125px;
+        height: 125px;
+    }
+    #octagon1{
+    
+        width: 125px;
+        height: 125px;
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+        text-align: center;
+      
+    }
+    
+    #octagon2{
+        margin-left: 60px;
+       
+        width: 125px;
+        height: 125px;
+      
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+    }
+    #octagon3{
+        margin-left: 60px;
+   
+      
+        width: 125px;
+        height: 125px;
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+    }
+    #text1{width:125px;height: 125px;font-size: 20px;}
+    #text2{width:125px;height: 125px;font-size: 20px;}
+    #text3{width: 125px;height: 125px;font-size: 20px;}
+}
+
+@media screen  and (min-width :1000px) {
+    .cloudBg{
+        width: 200px;
+        height: 75px;
+    }
+    #octagon1{
+        
+        width: 200px;
+        height: 200px;
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+        text-align: center;
+      
+    }
+    
+    #octagon2{
+        margin-left: 70px;
+     
+        width: 200px;
+        height: 200px;
+       
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+    }
+    #octagon3{
+        margin-left: 70px;
+      
+      
+        width: 200px;
+        height: 200px;
+        background-image: url(../image/팔각2.png);
+        background-size: cover;
+ 
+    }   
+    #text1{width:200px;height: 200px;font-size: 30px;}
+    #text2{width:200px;height: 200px;font-size: 30px;}
+    #text3{width:200px;height: 200px;font-size: 30px;}
+    
+}
+#menu{
+    
+    position: absolute;
+    top: 3%;
+   left: 97%;
+    padding: 10px;
+    border: 2px solid #efefef;
+    background-color: transparent;
+    color: #efefef;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    z-index: 11;
+}
+#close{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    padding: 10px;
+    border: 2px solid #efefef;
+    background-color: transparent;
+    color: #efefef;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    z-index: 11;
+}
+#menu:hover{
+    cursor:pointer;
+}
+#close:hover{
+    cursor:pointer;
+}
+
+/* 메뉴 */
+#jung{
+    color: #eee7d3;
+}
+#menuScr{
+    width: 0;
+    height: 20%;
+    position: absolute;
+    /* display: none; */
+    top: 0;
+    right: 0;
+    background-color: black;
+    z-index: 10;
+    transition: width 0.5s, height 0.5s, background-color 0.5s;
+}
+#tree{
+    background-image: url(/image/그림2.png);
+}
+#menu1{
+    font-family: 'Diphylleia', serif;
+    display: flex;
+    justify-self: left;
+    font-size: 20px;
+    right: 3%;
+    position: absolute;
+    top: 1%;
+    color: rgb(255, 255, 255);
+    transition:  color 0.5s;
+    z-index: 1;
+}
+#menu1>div{ 
+    margin:20px;
+}
+#menu2{
+    height: 60px;
+    width: 451.03px;
+    display: flex;
+    justify-self: left;
+    right: 3%;
+    position: absolute;
+    top: 1%;
+    z-index: 12;
+}
+#menu2>div{ 
+    width: 25%;
+    margin:20px;
+}
+
+
+#filter{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 9;
+    
+}
+/* 메뉴 끝 */
+ 
+#video1{display: none;}
+#video3{display: none;}
+#video2{display: none;}
+#text1{display: hidden;  text-align: center;}
+#text2{display: hidden; text-align: center;}
+#text3{display: hidden;  text-align: center;}
+.video{
+    z-index: -2;
+    /* position: absolute; */
+}
+
+/* footer */
+footer{
+    font-weight: 550;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    color: #efefef;
+    padding: 0 40px;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+footer>ul{
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+   
+}
+footer>ul li:first-child{
+    width: 110px;
+}
+footer>ul li{
+    display: inline-block;
+    font-size: 12px;
+    padding-right: 40px;
+    word-break: keep-all;
+    line-height: 20px;
+}
+footer>ul li b{
+    display: block;
+}
+footer>p{
+    width: 190px;
+    float: right;
+    font-size: 14px;
+    margin-top: 60px;
+    text-align: right;
+}
+/* 마우스 */
+#mouseicon{
+   
+    position: absolute; 
+    z-index: 11;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 100%;
+    mix-blend-mode: difference;
+    transition: width 0.2s,height 0.2s ,color 0.2s;
+}
+
+/* footer End */

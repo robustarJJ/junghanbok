@@ -1,0 +1,109 @@
+@import "./reset.css";
+@import "./global.css";
+body{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin: 0;
+}
+
+.mainImg{
+	width: 90%;
+	height: 60vh;
+	margin: 5vh auto 0;
+	background: url(../image/hanok4.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    position: relative;
+    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+}
+
+.mainImg>h3{
+    color: #fff;
+    font-size: 60px;
+    position: absolute;
+    left: 5%;
+    bottom: 6%;
+    text-shadow: 0 0 2px #222222;
+}
+
+.tit{
+    font-size: 32px;
+}
+.sub_page>.tit{
+    margin: 80px 0 20px;
+}
+.sub_page>p{
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sub_page>.sect,
+.group>.cont>p{
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+#message{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    
+    right: 20%;
+    
+}
+#sub_page{
+    margin-top: 23px;
+   
+    text-align: center;
+}
+#steps-st1_w{
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-self: left;
+    margin-top: 20px;
+}
+
+.group{
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 120px;
+    width: 80%;
+    padding: 40px 20px 60px;
+    box-sizing: border-box;
+}
+.group>.tit{
+    margin-bottom: 20px;
+}
+#steps-st1_w>li>div{
+    width: 180px;
+    height: 180px;
+}
+.c_w{
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.c_w:not(:nth-child(4n)){
+    margin-right: 20px;
+}
+.f20{
+    width: 200px;
+    height: 100px;
+    display: table-cell;
+    text-align: center;
+    line-height: 100px;
+}
+.c{
+    font-size: 20px;
+}

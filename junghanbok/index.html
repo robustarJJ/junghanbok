@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body  style="overflow:hidden;">
+    <!-- <div class="opening left"></div>
+    <div class="opening right"></div> -->
+    <!-- 오프닝 -->
+    <div id="opening">
+     <h1 id="jung"></h1></div>
+     <!-- <div id="bar"></div> -->
+     
+     <!-- 오프닝 끝 -->
+    <!-- 화면이동 애니메이션 -->
+    <div id="pagemove"><div id="moveimg"></div></div>
+     <div id="bg">
+        <video autoplay muted loop id="video1" src="./영상소스/한복영상1.mp4"></video>
+        <video autoplay muted loop id="video2" src="./영상소스/영상소스3.mp4"></video>
+        <video autoplay muted loop id="video3" src="./영상소스/한복2.mp4"></video>
+    </div>
+    <div class="bgImg"></div>
+    <div class="cloudBg cloud1"></div>
+    <div class="cloudBg cloud2"></div>
+    <div class="cloudBg cloud3"></div>
+    <div  id="mainSec" >
+       
+<!-- 
+        <button id="menu">menu</button> -->
+
+        <h1 id="logo">정한복</h1>
+     
+        <nav id="cartegory">
+
+        </nav>
+        <div id="octagon">
+             <div bac id="octagon1"></div>
+            <div id="octagon2"></div>
+            <div id="octagon3"></div>
+        </div>
+        <div id="octamenu">
+            <div>
+                <h1 id="text1">브랜드소개</h1>
+            </div>
+            <div>
+                <h1 id="text2">찾아오는길</h1>
+            </div>
+            <div>
+                <h1 id="text3">한복대여</h1>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- 메뉴 -->
+
+
+    <button id="close" style="display: none;">close</button>
+ 
+            <div id="menu1">
+                <div ><h1 >대여안내</h1></div>
+                <div><h1>커뮤니티</h1></div>
+                <div><h1>고객센터</h1></div>
+                <div ><h1 >로그인</h1></div>
+            </div>
+
+            <div id="menu2">
+                <div id="lentalInfo"></div>
+                <div></div>
+                <div id="qna"></div>
+                <div id="login"></div>
+            </div>
+     
+        <div id="filter"></div>
+  
+        
+    <!-- 메뉴 끝 -->
+    <!-- 마우스 시작 -->
+    <div id="mouseicon" class="mouseicon"></div>
+    <!-- 마우스 끝 -->
+    <footer>
+        <p>© 정한복. All rights reserved.</p>
+        <ul>
+            <li>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</li>
+            <li><b>Tel.</b>032 719 4074</li>
+            <li><b>Mail.</b>junghanbok@gmail.com</li>
+        </ul>
+    </footer>
+
+    
+</body>
+    <script>
+        // 시작이벤트
+        let i = 0
+        let txt = document.getElementById('jung')
+    
+        document.addEventListener("DOMContentLoaded",()=>{
+            setTimeout(()=> document.getElementById('jung').innerText+="정",400)
+            setTimeout(()=> document.getElementById('jung').innerText+="한",500)
+            setTimeout(()=> document.getElementById('jung').innerText+="복",600)
+            setTimeout(()=> document.getElementById('opening').style.display='none',1500)
+        }
+        )
+        // 시작이벤트 끝
+        // 메뉴효과\\
+        // document.getElementById('menu').addEventListener('click',()=>{
+        //     document.getElementById('menu').style.display ="none"
+        //     document.getElementById('close').style.display ="block"
+        //     document.getElementById('filter').style.display = "block"
+        //     document.getElementById('menuScr').style.width="50%"
+        //     document.getElementById('menuScr').style.height="10%"
+        //     setTimeout(()=>document.getElementById('menu1').style.color="white",2000)
+         
+            
+        // })
+        // document.getElementById('close').addEventListener('click',()=>{
+            
+        //     document.getElementById('menu').style.display ="block"
+        //     document.getElementById('close').style.display ="none"
+        //     document.getElementById('filter').style.display = "none"
+        //     document.getElementById('menuScr').style.width="0%"
+        //     document.getElementById('menuScr').style.height="10%"
+        //     document.getElementById('menu1').style.color="black"
+        // })
+
+        // 창문 효과
+        let mainSec = document.getElementById('mainSec')
+        
+        document.getElementById('octagon1').addEventListener("mouseout",()=>{
+            document.getElementById('video1').style.display ="none"
+           
+            document.getElementById('octagon1').style.opacity=1
+            document.getElementById("text1").style.opacity=0
+            document.getElementById('menu1').style.mixBlendMode="screen"
+            document.getElementById('logo').style.mixBlendMode="screen"
+            document.getElementsByTagName('footer')[0].style.color="white"
+            document.getElementById('octagon2').style.opacity=1
+            document.getElementById('octagon3').style.opacity=1
+    
+       
+            
+        })
+        document.getElementById('octagon1').addEventListener("mouseover",()=>{
+            document.getElementById('video1').style.display ="block"
+            document.getElementById('octagon2').style.opacity=0.5
+            document.getElementById('octagon3').style.opacity=0.5
+            setTimeout(0.3,document.getElementById('octagon1').style.opacity=0 ) 
+            document.getElementById("text1").style.opacity=1
+            document.getElementById('menu1').style.mixBlendMode="difference"
+            document.getElementById('logo').style.mixBlendMode="difference"
+            document.getElementsByTagName('footer')[0].style.color="black"
+            
+          
+          
+        })
+        document.getElementById('octagon2').addEventListener("mouseout",()=>{
+            document.getElementById('video2').style.display ="none"
+            document.getElementById("text2").style.opacity=0
+            
+            document.getElementById('octagon2').style.opacity=1
+            document.getElementById('menu1').style.mixBlendMode="screen"
+            document.getElementById('logo').style.mixBlendMode="screen"
+            document.getElementsByTagName('footer')[0].style.color="white"
+            document.getElementById('octagon1').style.opacity=1
+            document.getElementById('octagon3').style.opacity=1
+            
+        })
+        document.getElementById('octagon2').addEventListener("mouseover",()=>{
+            document.getElementById('video2').style.display ="block"
+           
+            setTimeout(0.3,document.getElementById('octagon2').style.opacity=0) 
+            document.getElementById('menu1').style.mixBlendMode="difference"
+            document.getElementById('logo').style.mixBlendMode="difference"
+            document.getElementById('octagon1').style.opacity=0.5
+            document.getElementById('octagon3').style.opacity=0.5
+            document.getElementById("text2").style.opacity=1
+            document.getElementsByTagName('footer')[0].style.color="black"
+          
+        })
+        document.getElementById('octagon3').addEventListener("mouseout",()=>{
+            document.getElementById('video3').style.display ="none"
+            document.getElementById("text3").style.opacity=0
+            document.getElementById('octagon2').style.opacity=1
+            document.getElementById('octagon1').style.opacity=1
+            document.getElementById('octagon3').style.opacity=1
+            document.getElementById('menu1').style.mixBlendMode="screen"
+            document.getElementById('logo').style.mixBlendMode="screen"
+            document.getElementsByTagName('footer')[0].style.color="white"
+            
+        })
+        document.getElementById('octagon3').addEventListener("mouseover",()=>{
+            document.getElementById('video3').style.display ="block"
+            document.getElementById('octagon2').style.opacity=0.5
+            document.getElementById('octagon1').style.opacity=0.5
+ 
+            document.getElementById("text3").style.opacity=1
+            setTimeout(0.3,document.getElementById('octagon3').style.opacity=0 ) 
+            document.getElementById('menu1').style.mixBlendMode="difference"
+            document.getElementById('logo').style.mixBlendMode="difference"
+            document.getElementsByTagName('footer')[0].style.color="black"
+           
+        })
+        // 창문효과 끝
+       ////////////////////////////////////////////////////페이지 이동
+        // 로그인페이지 이동
+        document.getElementById('login').addEventListener('click',()=>{
+            setTimeout(()=> location.href="./login.html",1700)
+            // 화면 내리기
+            document.getElementById("pagemove").style.height='100%'
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=1,600)
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=0,1100)
+            
+           
+        
+           
+        })
+        //브랜드 소개 페이지 이동
+        document.getElementById('octagon1').addEventListener("click",()=>{
+            setTimeout(()=>location.href="./brandintro.html",1700)
+              // 화면 내리기
+              document.getElementById("pagemove").style.height='100%'
+              document.getElementById("pagemove").style.height='100%'
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=1,600)
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=0,1100)
+            
+         })
+      
+        // 대여한복 페이지 이동
+        document.getElementById('octagon3').addEventListener("click",()=>{
+            setTimeout(()=>location.href="./rental_w.html",1700)
+            // 화면 내리기
+            document.getElementById("pagemove").style.height='100%'
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=1,600)
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=0,1100)
+            
+         })
+        
+        //  대여안내 페이지 이동
+        document.getElementById('lentalInfo').addEventListener("click",()=>{
+            setTimeout(()=>location.href="./rentalInfo.html",1700)
+              // 화면 내리기
+              document.getElementById("pagemove").style.height='100%'
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=1,600)
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=0,1100)
+            
+            //  setTimeout(()=> document.getElementById("pagemove").style.height='0%',700) 
+         })
+         //고객센터 페이지 이동
+         document.getElementById('qna').addEventListener("click",()=>{
+            setTimeout(()=>location.href="./QnA.html",1700)
+              // 화면 내리기
+              document.getElementById("pagemove").style.height='100%'
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=1,600)
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=0,1100)
+            
+         
+         })
+           //찾아오는길 페이지 이동
+           document.getElementById('octagon2').addEventListener("click",()=>{
+            setTimeout(()=>location.href="./brandway.html",1700)
+              // 화면 내리기
+              document.getElementById("pagemove").style.height='100%'
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=1,600)
+            setTimeout(()=> document.getElementById('moveimg').style.opacity=0,1100)
+            
+         
+         })
+
+
+
+        /////////////////////////////////////////////////페이지 이동 끝
+        //마우스
+        document.addEventListener('mousemove', (e)=>{
+            console.log(e)
+            let icon = document.querySelector('.mouseicon')
+            icon.style.left = e.pageX-12.5+'px'
+            icon.style.top = e.pageY-12.5+'px'       
+        })
+        document.addEventListener('mousedown',()=>{
+            document.getElementById('mouseicon').style.width="40px"
+            document.getElementById('mouseicon').style.height="40px"
+      
+        })
+        document.addEventListener('mouseup',()=>{
+            document.getElementById('mouseicon').style.width="25px"
+            document.getElementById('mouseicon').style.height="25px"
+      
+        })
+        document.getElementById('menu1').addEventListener('mouseover',()=>{
+            document.getElementById('mouseicon').style.width="40px"
+            document.getElementById('mouseicon').style.height="40px"
+            document.getElementById('mouseicon').style.backgroundColor="#ffcc6d"
+            
+        })
+        document.getElementById('menu1').addEventListener('mouseout',()=>{
+            document.getElementById('mouseicon').style.width="25px"
+            document.getElementById('mouseicon').style.height="25px"
+            document.getElementById('mouseicon').style.color="white"
+            document.getElementById('mouseicon').style.mixBlendMode="difference"
+            document.getElementById('mouseicon').style.backgroundColor="white"
+        })
+        document.getElementById('logo').addEventListener('mouseover',()=>{
+            document.getElementById('mouseicon').style.width="40px"
+            document.getElementById('mouseicon').style.height="40px"
+            document.getElementById('mouseicon').style.backgroundColor="#ffcc6d"
+            
+        })
+        document.getElementById('logo').addEventListener('mouseout',()=>{
+            document.getElementById('mouseicon').style.width="25px"
+            document.getElementById('mouseicon').style.height="25px"
+            document.getElementById('mouseicon').style.color="white"
+            document.getElementById('mouseicon').style.mixBlendMode="difference"
+            document.getElementById('mouseicon').style.backgroundColor="white"
+        })
+        document.getElementById('octagon').addEventListener('mouseover',()=>{
+            document.getElementById('mouseicon').style.width="40px"
+            document.getElementById('mouseicon').style.height="40px"
+            document.getElementById('mouseicon').style.backgroundColor="#ffcc6d"
+            
+        })
+        document.getElementById('octagon').addEventListener('mouseout',()=>{
+            document.getElementById('mouseicon').style.width="25px"
+            document.getElementById('mouseicon').style.height="25px"
+            document.getElementById('mouseicon').style.color="white"
+            document.getElementById('mouseicon').style.mixBlendMode="difference"
+            document.getElementById('mouseicon').style.backgroundColor="white"
+        })
+        //마우스 끝
+    </script>
+</html>
